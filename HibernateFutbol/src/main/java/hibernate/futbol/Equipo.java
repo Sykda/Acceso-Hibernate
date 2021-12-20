@@ -8,8 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -23,6 +22,7 @@ public class Equipo {
 	private String nombre, ciudad;
 	private Entrenador entrenador;
 	private Set<Jugador> jugadores;
+	private Set<Competicion> competiciones;
 
 	public Equipo() {
 	}
@@ -45,10 +45,19 @@ public class Equipo {
 	public Set<Jugador> getJugadores() {
 		return jugadores;
 	}
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
 	public Entrenador getEntrenador() {
 		return entrenador;
+	}
+
+	@ManyToMany(mappedBy = "equipo")
+	public Set<Competicion> getCompeticiones() {
+		return competiciones;
+	}
+
+	public void setCompeticiones(Set<Competicion> competiciones) {
+		this.competiciones = competiciones;
 	}
 
 	public void setEntrenador(Entrenador entrenador) {

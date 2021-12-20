@@ -15,5 +15,6 @@
   <mapping class="hibernate.futbol.Equipo"/>
   <mapping class="hibernate.futbol.Entrenador"/>
   <mapping class="hibernate.futbol.Jugador"/>
+  <mapping class="hibernate.futbol.Competicion"/>
  </session-factory>
 </hibernate-configuration>

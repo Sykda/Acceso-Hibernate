@@ -1,7 +1,5 @@
 package hibernate.futbol;
 
-import java.util.HashSet;
-import java.util.Set;
 import org.hibernate.Session;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -30,19 +28,15 @@ public class FutbolManager {
 
 		Equipo equipo = new Equipo();
 		Entrenador entrenador = new Entrenador();
-		
+
 		entrenador.setNombre("paco");
-		
+
 		equipo.setNombre("a");
 		equipo.setCiudad("madrid");
 		equipo.setEntrenador(entrenador);
-		
-		
-		
-		
+
 		session.save(entrenador);
 		session.save(equipo);
-		
 
 		session.getTransaction().commit();
 		session.close();

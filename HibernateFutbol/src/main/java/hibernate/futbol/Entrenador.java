@@ -1,11 +1,9 @@
 package hibernate.futbol;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -29,12 +27,12 @@ public class Entrenador {
 
 	@Id
 	@Column
-	@GeneratedValue (generator="foreigngen")
+	@GeneratedValue(generator = "foreigngen")
 	public long getId() {
 		return id;
 	}
-	
-	@OneToOne(mappedBy="entrenador")
+
+	@OneToOne(mappedBy = "entrenador")
 	public Equipo getEquipo() {
 		return equipo;
 	}
@@ -69,8 +67,6 @@ public class Entrenador {
 
 	public void setEquipo(Equipo equipo) {
 		this.equipo = equipo;
-	}	
-	
-	
+	}
 
 }
