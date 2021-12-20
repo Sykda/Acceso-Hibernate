@@ -52,7 +52,7 @@ public class Equipo {
 		return entrenador;
 	}
 
-	@ManyToMany(mappedBy = "equipo")
+	@ManyToMany(mappedBy = "equipos")
 	public Set<Competicion> getCompeticiones() {
 		return competiciones;
 	}
