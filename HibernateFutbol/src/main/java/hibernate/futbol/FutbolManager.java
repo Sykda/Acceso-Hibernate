@@ -26,6 +26,7 @@ public class FutbolManager {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 
+		/*
 		Equipo equipo = new Equipo();
 		Entrenador entrenador = new Entrenador();
 
@@ -39,6 +40,7 @@ public class FutbolManager {
 		session.save(equipo);
 
 		session.getTransaction().commit();
+		*/
 		session.close();
 	}
 }
