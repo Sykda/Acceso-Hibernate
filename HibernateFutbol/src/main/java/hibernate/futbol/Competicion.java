@@ -3,6 +3,7 @@ package hibernate.futbol;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -34,6 +35,15 @@ public class Competicion {
 	public int getId() {
 		return id;
 	}
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+	public Set<Equipo> getEquipos() {
+		return equipos;
+	}
+	
+	public void addEquipo(Equipo e) {
+		equipos.add(e);
+	}
 
 	public void setId(int id) {
 		this.id = id;
@@ -63,11 +73,7 @@ public class Competicion {
 		FechaInicio = fechaInicio;
 	}
 
-	@ManyToMany
-	public Set<Equipo> getEquipos() {
-		return equipos;
-	}
-
+	
 	public void setEquipos(Set<Equipo> equipos) {
 		this.equipos = equipos;
 	}

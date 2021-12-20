@@ -1,6 +1,7 @@
 package hibernate.futbol;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -21,8 +22,8 @@ public class Equipo {
 	private Date fecha, fundacion;
 	private String nombre, ciudad;
 	private Entrenador entrenador;
-	private Set<Jugador> jugadores;
-	private Set<Competicion> competiciones;
+	private Set<Jugador> jugadores = new HashSet<Jugador>();
+	private Set<Competicion> competiciones =  new HashSet<Competicion>();
 
 	public Equipo() {
 	}
@@ -54,6 +55,14 @@ public class Equipo {
 	@ManyToMany(mappedBy = "equipo")
 	public Set<Competicion> getCompeticiones() {
 		return competiciones;
+	}
+	
+	public void addJugador(Jugador j) {
+		jugadores.add(j);
+	}
+	
+	public void addCompeticion(Competicion c) {
+		competiciones.add(c);
 	}
 
 	public void setCompeticiones(Set<Competicion> competiciones) {
