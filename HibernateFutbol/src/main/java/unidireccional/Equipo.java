@@ -47,7 +47,7 @@ public class Equipo {
 		return jugadores;
 	}
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "entrenador", cascade = CascadeType.ALL)
 	public Entrenador getEntrenador() {
 		return entrenador;
 	}

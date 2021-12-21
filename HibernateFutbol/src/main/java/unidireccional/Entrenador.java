@@ -14,7 +14,7 @@ public class Entrenador {
 	private long id;
 	private int edad;
 	private String nombre, apellidos;
-	private Equipo equipo;
+	
 
 	public Entrenador() {
 	}
@@ -30,11 +30,6 @@ public class Entrenador {
 	@GeneratedValue(generator = "foreigngen")
 	public long getId() {
 		return id;
-	}
-
-	@OneToOne(mappedBy = "entrenador")
-	public Equipo getEquipo() {
-		return equipo;
 	}
 
 	public int getEdad() {
@@ -63,10 +58,6 @@ public class Entrenador {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public void setEquipo(Equipo equipo) {
-		this.equipo = equipo;
 	}
 
 }

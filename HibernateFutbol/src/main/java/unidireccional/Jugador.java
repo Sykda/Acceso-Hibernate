@@ -14,7 +14,6 @@ public class Jugador {
 	private int id, edad, posicion;
 	private String nombre;
 
-	Equipo equipo;
 
 	public Jugador() {
 	}
@@ -30,11 +29,6 @@ public class Jugador {
 	@GeneratedValue
 	public int getId() {
 		return id;
-	}
-
-	@ManyToOne
-	public Equipo getEquipo() {
-		return equipo;
 	}
 
 	public int getEdad() {
@@ -59,10 +53,6 @@ public class Jugador {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public void setEquipo(Equipo equipo) {
-		this.equipo = equipo;
 	}
 
 	public void setId(int id) {
