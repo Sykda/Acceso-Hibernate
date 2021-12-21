@@ -12,9 +12,9 @@
   <property name="hibernate.connection.username">root</property>
   <property name="hibernate.connection.password">root</property>
   <property name="hibernate.generate_statistics">false</property>
-  <mapping class="hibernate.futbol.Equipo"/>
-  <mapping class="hibernate.futbol.Entrenador"/>
-  <mapping class="hibernate.futbol.Jugador"/>
-  <mapping class="hibernate.futbol.Competicion"/>
+  <mapping class="bidireccional.Equipo"/>
+  <mapping class="bidireccional.Entrenador"/>
+  <mapping class="bidireccional.Jugador"/>
+  <mapping class="bidireccional.Competicion"/>
  </session-factory>
 </hibernate-configuration>

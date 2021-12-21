@@ -1,4 +1,4 @@
-package hibernate.futbol;
+package bidireccional;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

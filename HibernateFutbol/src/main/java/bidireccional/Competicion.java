@@ -1,4 +1,4 @@
-package hibernate.futbol;
+package bidireccional;
 
 import java.util.Date;
 import java.util.Set;

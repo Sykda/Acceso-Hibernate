@@ -1,4 +1,4 @@
-package hibernate.futbol;
+package bidireccional;
 
 import org.hibernate.Session;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
