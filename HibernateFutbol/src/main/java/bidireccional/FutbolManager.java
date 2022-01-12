@@ -25,22 +25,18 @@ public class FutbolManager {
 		// obtains the session
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
+		
+		
 
+		Jugador jugador1= new Jugador();
+		Integer userID=jugador1.getId();
 		/*
-		Equipo equipo = new Equipo();
-		Entrenador entrenador = new Entrenador();
-
-		entrenador.setNombre("paco");
-
-		equipo.setNombre("a");
-		equipo.setCiudad("madrid");
-		equipo.setEntrenador(entrenador);
-
-		session.save(entrenador);
-		session.save(equipo);
-
-		session.getTransaction().commit();
+		 jugador1 =(Jugador) session.get(Jugador.class, userID);
+		 System.out.println(jugador.getUserName()+"----"+jugador.getUserMessage);
+		
+		 jugador1 =(Jugador) session.load(Jugador.class, userID);
 		*/
+		
 		session.close();
 	}
 }
